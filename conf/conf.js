@@ -17,5 +17,12 @@ exports.config = {
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000
+  },
+
+  onPrepare: function() {
+   var AllureReporter = require('C:\\Users\\prasa\\AppData\\Roaming\\npm\\node_modules\\jasmine-allure-reporter');
+    jasmine.getEnv().addReporter(new AllureReporter({
+      resultsDir: 'allure-results'
+    }));
   }
 };
